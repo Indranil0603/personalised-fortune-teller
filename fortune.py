@@ -15,17 +15,20 @@ def get_fortune(mood):
         "neutral": [
             "🌟 A surprise is around the corner, stay curious!",
             "💫 Balance brings clarity. Trust yourself.",
+        ],
+        "stressed": [
+            "🧘‍♂️ Breathe in peace, breathe out stress.",
+            "🌿 Take a break, Indranil. You’ve earned it!",
         ]
-        
     }
     if mood in fortunes:
         return random.choice(fortunes[mood])
     else:
-        return "🤔 I can't predict that mood. Try happy, sad, neutral"
+        return "🤔 I can't predict that mood. Try happy, sad, neutral, or stressed."
 
 def main():
     print("🔮 Welcome to Indranil Sen's Fortune Teller (21JE0413) 🔮")
-    mood = input("How are you feeling today? (happy/sad/neutral): ").strip().lower()
+    mood = input("How are you feeling today? (happy/sad/neutral/stressed): ").strip().lower()
     print(f"\n✨ Your fortune: {get_fortune(mood)} ✨")
 
 if __name__ == "__main__":
